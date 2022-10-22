@@ -1,7 +1,8 @@
 package com.bridgelabz;
+
 public class SnakeAndLadder {
     public static void main(String[] args) {
-        //UC5 - Ensure the Player gets to exact winning position 100.
+        //UC6 - Report the number of times the dice was played to win the game and also the position after every die role.
         System.out.println("Welcome to the Snake and Ladder Program by using Java");
 
         int position = 0;
@@ -18,10 +19,11 @@ public class SnakeAndLadder {
                     position += 0;
                     break;
                 case 2:
-                    System.out.println("Hoo.. you got an 'Ladder'");
+                    System.out.println("Hoo.. you got 'Ladder'");
                     position += die;
                     if (position > 100){
                         position = 100;
+                        System.out.println("Count of the dice was played to win the game :: "+i);
                     }
                     break;
                 default:
@@ -34,7 +36,7 @@ public class SnakeAndLadder {
             }
             System.out.println("Payer starts at position :: " + position);
             if (position == 100){
-                System.out.println("Wow You won the game ....");
+                System.out.println("You won the game ....");
             }
         }
     }
