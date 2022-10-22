@@ -1,23 +1,34 @@
 package com.bridgelabz;
 public class SnakeAndLadder {
-    static int player1=0;
     public static void main(String[] args) {
-        System.out.println("Welcome to Snake and ladder program");
-        System.out.println("player 1 starts from position:" +player1);
+        //UC3 - The player then checking for an option (No play, Ladder, Snake).
+        System.out.println("Welcome to the Snake and Ladder Program by using Java");
 
-        int dice=(int)(Math.random()*6);
-        if(dice==1){
-            System.out.println("Dice value is: 1");
-        }else if(dice==2){
-            System.out.println("Dice value is: 2");
-        }else if(dice==3){
-            System.out.println("Dice value is: 3");
-        }else if(dice==4){
-            System.out.println("Dice value is: 4");
-        } else if(dice==5){
-        System.out.println("Dice value is: 5");
-        }else {
-            System.out.println("Dice Value is: 6");
+        int position = 0;
+        int die = (int)(Math.random() * 6 + 1);
+        int option = (int)(Math.random() * 3);
+
+        System.out.println("the output of the die is :: "+die);
+
+        switch (option){
+            case 1 :
+                System.out.println("Sorry you got 'No Play'");
+                position += 0;
+                break;
+            case 2 :
+                System.out.println("Wow you got an 'Ladder'");
+                position += die;
+                break;
+            default:
+                System.out.println("No... you got an 'Snake' ");
+                position -= die;
+                if (position < 0){
+                    position = 0;
+                }
+                break;
         }
+
+        System.out.println("Payer starts at position :: "+ position );
+
     }
 }
