@@ -1,7 +1,7 @@
 package com.bridgelabz;
 public class SnakeAndLadder {
     public static void main(String[] args) {
-        //UC4 - Repeat till the Player reaches the Winning position 100.
+        //UC5 - Ensure the Player gets to exact winning position 100.
         System.out.println("Welcome to the Snake and Ladder Program by using Java");
 
         int position = 0;
@@ -32,9 +32,9 @@ public class SnakeAndLadder {
                     }
                     break;
             }
-            System.out.println("Player is at position :: " + position);
+            System.out.println("Payer starts at position :: " + position);
             if (position == 100){
-                System.out.println(" You won the game ....");
+                System.out.println("Wow You won the game ....");
             }
         }
     }
